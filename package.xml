@@ -65,6 +65,7 @@
   <depend>tmc_utils</depend>
   <depend>trajectory_msgs</depend>
   <depend>hsr_manipulation_2019</depend>
+  <depend>manip_prelim</depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>

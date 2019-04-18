@@ -14,6 +14,7 @@ __init__	src/groceries/common/manipulation.py	/^    def __init__(self, robot):$/
 __init__	src/groceries/groceries/states.py	/^    def __init__(self, robot):$/;"	m	class:MoveToShelf
 __init__	src/groceries/groceries/states.py	/^    def __init__(self, robot):$/;"	m	class:MoveToTable
 __init__	src/groceries/groceries/states.py	/^    def __init__(self, robot):$/;"	m	class:SelectObject
+ar_cli	src/groceries/groceries/states.py	/^ar_cli = actionlib.SimpleActionClient('averaging', arPoseAction)$/;"	v
 cli	src/groceries/groceries/states.py	/^cli = actionlib.SimpleActionClient('\/move_base\/move', MoveBaseAction)$/;"	v
 d	setup.py	/^d = generate_distutils_setup($/;"	v
 execute	src/groceries/common/manipulation.py	/^    def execute(self, userdata):$/;"	m	class:PickObject

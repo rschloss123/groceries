@@ -44,6 +44,7 @@ catkin_package(
   tmc_utils
   actionlib_msgs
   hsr_manipulation_2019
+  manip_prelim
 )
 
 #include_directories(

@@ -21,14 +21,23 @@ class PickObject(smach.State):
 
         goal = hsr_manipulation_2019.msg.pickUpMoveitGoal()
 
-        goal.target_pose.pose.position.x = 0.8
-        goal.target_pose.pose.position.y = 0.0 #0.4
-        goal.target_pose.pose.position.z = 1.0 #0.5
-        goal.target_pose.pose.orientation.x = 0.0
-        goal.target_pose.pose.orientation.y = 0.0
-        goal.target_pose.pose.orientation.z = 0.0
-        goal.target_pose.pose.orientation.w = 0.0
-        goal.target_pose.header.frame_id  = 'map' # 'head_rgbd_sensor_link'
+#        goal.target_pose.pose.position.x = 0.8
+#        goal.target_pose.pose.position.y = 0.0 #0.4
+#        goal.target_pose.pose.position.z = 1.0 #0.5
+#        goal.target_pose.pose.orientation.x = 0.0
+#        goal.target_pose.pose.orientation.y = 0.0
+#        goal.target_pose.pose.orientation.z = 0.0
+#        goal.target_pose.pose.orientation.w = 0.0
+#        goal.target_pose.header.frame_id  = 'map' # 'head_rgbd_sensor_link'
+
+        goal.target_pose.pose.position.x = userdata.object_location.pose.position.x 
+        goal.target_pose.pose.position.y = userdata.object_location.pose.position.y 
+        goal.target_pose.pose.position.z = userdata.object_location.pose.position.z 
+        goal.target_pose.pose.orientation.x = userdata.object_location.pose.orientation.x 
+        goal.target_pose.pose.orientation.y = userdata.object_location.pose.orientation.y 
+        goal.target_pose.pose.orientation.z = userdata.object_location.pose.orientation.z 
+        goal.target_pose.pose.orientation.w = userdata.object_location.pose.orientation.w 
+        goal.target_pose.header.frame_id  = userdata.object_location.header.frame_id 
 
         print "requesting" 
 
@@ -71,9 +80,9 @@ class PlaceObject(smach.State):
 
         goal = hsr_manipulation_2019.msg.putDownMoveitGoal()
 
-        goal.target_pose.pose.position.x = 0.8
+        goal.target_pose.pose.position.x = 0.7
         goal.target_pose.pose.position.y = -0.6 #0.4
-        goal.target_pose.pose.position.z = 1.0 #0.5
+        goal.target_pose.pose.position.z = 1.15 #0.5
         goal.target_pose.pose.orientation.x = 0.0
         goal.target_pose.pose.orientation.y = 0.0
         goal.target_pose.pose.orientation.z = 0.0
