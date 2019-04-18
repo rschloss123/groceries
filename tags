@@ -1,0 +1,27 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+MoveToShelf	src/groceries/groceries/states.py	/^class MoveToShelf(smach.State):$/;"	c
+MoveToTable	src/groceries/groceries/states.py	/^class MoveToTable(smach.State):$/;"	c
+PickObject	src/groceries/common/manipulation.py	/^class PickObject(smach.State):$/;"	c
+PlaceObject	src/groceries/common/manipulation.py	/^class PlaceObject(smach.State):$/;"	c
+SelectObject	src/groceries/groceries/states.py	/^class SelectObject(smach.State):$/;"	c
+__init__	src/groceries/common/manipulation.py	/^    def __init__(self, robot):$/;"	m	class:PickObject
+__init__	src/groceries/common/manipulation.py	/^    def __init__(self, robot):$/;"	m	class:PlaceObject
+__init__	src/groceries/groceries/states.py	/^    def __init__(self, robot):$/;"	m	class:MoveToShelf
+__init__	src/groceries/groceries/states.py	/^    def __init__(self, robot):$/;"	m	class:MoveToTable
+__init__	src/groceries/groceries/states.py	/^    def __init__(self, robot):$/;"	m	class:SelectObject
+cli	src/groceries/groceries/states.py	/^cli = actionlib.SimpleActionClient('\/move_base\/move', MoveBaseAction)$/;"	v
+d	setup.py	/^d = generate_distutils_setup($/;"	v
+execute	src/groceries/common/manipulation.py	/^    def execute(self, userdata):$/;"	m	class:PickObject
+execute	src/groceries/common/manipulation.py	/^    def execute(self, userdata):$/;"	m	class:PlaceObject
+execute	src/groceries/groceries/states.py	/^    def execute(self, userdata):$/;"	m	class:MoveToShelf
+execute	src/groceries/groceries/states.py	/^    def execute(self, userdata):$/;"	m	class:MoveToTable
+execute	src/groceries/groceries/states.py	/^    def execute(self, userdata):$/;"	m	class:SelectObject
+main	scripts/storing_groceries_2019	/^def main():$/;"	f
+navigation_action	src/groceries/groceries/states.py	/^def navigation_action(goal_x,goal_y,goal_yaw):$/;"	f
+package_dir	setup.py	/^    package_dir={'':'src'},$/;"	v
+packages	setup.py	/^    packages=['groceries'],$/;"	v

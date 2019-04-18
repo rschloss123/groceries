@@ -21,14 +21,14 @@ class PickObject(smach.State):
 
         goal = hsr_manipulation_2019.msg.pickUpMoveitGoal()
 
-        goal.target_pose.pose.position.x = 0.0
-        goal.target_pose.pose.position.y = 0.4
-        goal.target_pose.pose.position.z = 0.5
+        goal.target_pose.pose.position.x = 0.8
+        goal.target_pose.pose.position.y = 0.0 #0.4
+        goal.target_pose.pose.position.z = 1.0 #0.5
         goal.target_pose.pose.orientation.x = 0.0
         goal.target_pose.pose.orientation.y = 0.0
         goal.target_pose.pose.orientation.z = 0.0
         goal.target_pose.pose.orientation.w = 0.0
-        goal.target_pose.header.frame_id  = 'head_rgbd_sensor_link'
+        goal.target_pose.header.frame_id  = 'map' # 'head_rgbd_sensor_link'
 
         print "requesting" 
 
@@ -71,14 +71,14 @@ class PlaceObject(smach.State):
 
         goal = hsr_manipulation_2019.msg.putDownMoveitGoal()
 
-        goal.target_pose.pose.position.x = 0.0
-        goal.target_pose.pose.position.y = 0.4
-        goal.target_pose.pose.position.z = 0.5
+        goal.target_pose.pose.position.x = 0.8
+        goal.target_pose.pose.position.y = -0.6 #0.4
+        goal.target_pose.pose.position.z = 1.0 #0.5
         goal.target_pose.pose.orientation.x = 0.0
         goal.target_pose.pose.orientation.y = 0.0
         goal.target_pose.pose.orientation.z = 0.0
         goal.target_pose.pose.orientation.w = 0.0
-        goal.target_pose.header.frame_id  = 'head_rgbd_sensor_link'
+        goal.target_pose.header.frame_id  = 'map' #head_rgbd_sensor_link'
 
         print "requesting" 
 

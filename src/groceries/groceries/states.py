@@ -33,13 +33,20 @@ class MoveToShelf(smach.State):
     def execute(self, userdata):
 
         goal_x = 0.0 
-        goal_y = -2.0 
+        goal_y =  -0.6 
         goal_yaw = 0.0 
 
         navigation_action(goal_x, goal_y, goal_yaw)
 
         return 'succeeded'
 
+class SelectObject(smach.State):
+    def __init__(self, robot):
+        smach.State.__init__(self, outcomes=['succeeded', 'aborted'])
+    def execute(self, userdata):
+        
+        return 'succeeded'
+        
 def navigation_action(goal_x,goal_y,goal_yaw):
 	pose = PoseStamped()
 	pose.header.stamp = rospy.Time.now()

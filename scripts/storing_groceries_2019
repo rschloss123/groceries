@@ -22,16 +22,24 @@ def main():
         except (exceptions.ResourceNotFoundError, exceptions.RobotConnectionError) as e:
             rospy.logerr_throttle(1, 'Failed to obtain resource: {}\nRetrying...'.format(e))
 
-
-    pick_and_place_sm = smach.StateMachine(["succeeded", "aborted"],input_keys=['goal_handle'],
-                                               output_keys=['goal_handle'])  
+    pick_and_place_sm = smach.StateMachine(["succeeded", "aborted"],input_keys=[],
+                                               output_keys=[])  
     with pick_and_place_sm:
         smach.StateMachine.add('MOVE_TO_TABLE',
                 states.MoveToTable(robot),
                 transitions={
-                    'succeeded': 'PICK_OBJECT'
+                    'succeeded': 'SELECT_OBJECT'
                 }
                 ) # TODO add failure case
+
+        smach.StateMachine.add('SELECT_OBJECT',
+                states.SelectObject(robot),
+                transitions={
+                    'succeeded': 'PICK_OBJECT',
+                    'aborted': 'SELECT_OBJECT'
+                }
+                )
+
         smach.StateMachine.add('PICK_OBJECT', 
                manipulation.PickObject(robot),
                transitions = {
